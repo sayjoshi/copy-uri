@@ -19,7 +19,7 @@
 
     - name: Create backup directory?
       file:
-        path: /var/lib/awx/projects/copy/PA_backup1
+        path: /var/lib/awx/projects/copy
         state: directory
         mode: 0777
     - name: Save config
