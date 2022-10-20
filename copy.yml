@@ -19,9 +19,9 @@
 
     - name: Create backup directory?
       file:
-        path= /var/lib/awx/projects/copy/PA_backup1
+        path: /var/lib/awx/projects/copy/PA_backup1
         state= directory
-        mode= 0777
+        mode: 0777
     - name: Save config
       copy:
         content: '{{ response_pa_config.content }}'
