@@ -3,7 +3,7 @@
   hosts: localhost
   tasks:
     - name: get rest api
-      uri
+      uri:
         validate_certs: no
         url: 'https://192.168.122.171/api/v2/config/'
         user: admin
