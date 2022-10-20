@@ -5,7 +5,7 @@
     - name: get rest api
       uri:
         validate_certs: no
-        url: 'https://https://vm251-81.gsslab.pnq2.redhat.com/api/v2/config/'
+        url: 'https://vm251-81.gsslab.pnq2.redhat.com/api/v2/config/'
         user: admin
         password: redhat
         body_format: json
