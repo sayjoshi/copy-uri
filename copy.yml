@@ -1,6 +1,7 @@
 ---
 - name: content copy
-  hosts: localhost
+  hosts: all
+  connection: local
   tasks:
     - name: get rest api
       uri:
@@ -18,9 +19,8 @@
         msg: "{{ response_pa_config.content }}"
 
  
-    - lineinfile: 
-        create: yes 
-        regexp: "NONEXISTENTLINE" 
-        dest: /tmp/copyhere.txt
-        line: "{{ response_pa_config.content}}" 
-        state: present
+    - name: Save config
+      copy:
+        content: '{{ response_pa_config.content }}'
+        dest: '/tmp/backup.txt'
+        
