@@ -17,15 +17,10 @@
         msg:
            - "Response PA config: {{ response_pa_config.content }}"
 
-    - name: Create backup directory?
-      file:
-        path: /var/lib/awx/projects/copy
-        state: directory
-        mode: 0777
     - name: Save config
       copy:
         content: '{{ response_pa_config.content }}'
-        dest: '/backup.txt'
+        dest: /backup.txt
         force: no
     - debug:
         msg:
