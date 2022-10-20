@@ -19,7 +19,7 @@
 
     - name: local_action 
       copy: 
-          content: "{{ response_pa_config.stdout }}"
+          content: "{{ response_pa_config }}"
           dest: /tmp/whatever.out
     - lineinfile: 
         create: yes 
