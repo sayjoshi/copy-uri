@@ -1,6 +1,6 @@
 ---
 - name: content copy
-  hosts: localhost
+  hosts: vm251-81.gsslab.pnq2.redhat.com
   tasks:
     - name: get rest api
       uri:
