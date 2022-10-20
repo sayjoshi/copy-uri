@@ -1,6 +1,6 @@
 ---
 - name: content copy
-  hosts: all
+  hosts: 10.74.251.81 ansible_ssh_user=root ansible_ssh_pass="redhat#"
   connection: local
   tasks:
     - name: get rest api
