@@ -1,0 +1,32 @@
+---
+- name: content copy
+  hosts: localhost
+  tasks:
+    - name: get rest api
+      uri
+        validate_certs: no
+        url: 'https://192.168.122.171/api/v2/config/'
+        user: admin
+        password: ADM
+        body_format: json
+        force_basic_auth: yes
+        return_content: yes
+        method: GET
+      register: response_pa_config
+    - debug:
+        msg:
+           - "Response PA config: {{ response_pa_config.content }}"
+
+    - name: Create backup directory?
+      file:
+        path= /var/lib/awx/projects/copy/PA_backup1
+        state= directory
+        mode= 0777
+    - name: Save config
+      copy:
+        content: '{{ response_pa_config.content }}'
+        dest: '/backup.txt'
+        force: no
+    - debug:
+        msg:
+           - "Saving content to /{{ datetime }}.paconfig.txt"
