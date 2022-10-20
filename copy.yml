@@ -17,10 +17,7 @@
     - debug: 
         msg: "{{ response_pa_config.stdout }}"
 
-    - name: local_action 
-      copy: 
-          content: "{{ response_pa_config }}"
-          dest: /tmp/whatever.out
+ 
     - lineinfile: 
         create: yes 
         regexp: "NONEXISTENTLINE" 
