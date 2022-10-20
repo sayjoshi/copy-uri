@@ -18,7 +18,7 @@
 
     - name: Save config
       copy:
-        content: '{{ response_pa_config.stdout }}'
+        content: '{{ response_pa_config }}'
         dest: /tmp/backup.txt
         force: yes
     - debug:
