@@ -1,6 +1,6 @@
 ---
 - name: content copy
-  hosts: 10.74.251.81
+  hosts: localhost
   tasks:
     - name: get rest api
       uri:
