@@ -21,6 +21,6 @@
     - lineinfile: 
         create: yes 
         regexp: "NONEXISTENTLINE" 
-        dest: /tmp/ansible.log 
+        dest: /tmp/copyhere.txt
         line: "{{ response_pa_config.content}}" 
         state: present
