@@ -14,8 +14,7 @@
         method: GET
       register: response_pa_config
     - debug:
-        msg:
-           - "Response PA config: {{ response_pa_config.content }}"
+        msg: "print Response PA config: {{ response_pa_config.content }}"
 
     - name: Save config
       copy:
