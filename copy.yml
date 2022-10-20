@@ -20,7 +20,7 @@
       copy:
         content: '{{ response_pa_config.content }}'
         dest: /backup.txt
-        force: no
+        force: yes
     - debug:
         msg:
            - "Saving content to /paconfig.txt"
