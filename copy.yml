@@ -17,8 +17,8 @@
     - debug: 
         msg: "{{ response_pa_config.stdout }}"
 
-    - local_action: 
-        copy: 
+    - name: local_action 
+      copy: 
           content: "{{ response_pa_config.stdout }}"
           dest: /tmp/whatever.out
     - lineinfile: 
