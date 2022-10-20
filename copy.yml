@@ -14,13 +14,13 @@
         method: GET
       register: response_pa_config
     - debug:
-        msg: "print Response PA config: {{ response_pa_config.content }}"
+        msg: "print Response PA config: {{ response_pa_config.stdout }}"
 
     - name: Save config
       copy:
-        content: '{{ response_pa_config.content }}'
-        dest: /backup.txt
+        content: '{{ response_pa_config.stdout }}'
+        dest: /tmp/backup.txt
         force: yes
     - debug:
         msg:
-           - "Saving content to /paconfig.txt"
+           - "Saving content to /tmp/paconfig.txt"
