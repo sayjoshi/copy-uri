@@ -8,7 +8,7 @@
         url: 'https://192.168.122.171/api/v2/config/'
         user: admin
         password: ADM
-        body_format: json
+        #body_format: json
         force_basic_auth: yes
         return_content: yes
         method: GET
