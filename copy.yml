@@ -21,5 +21,5 @@
     - name: Save config
       copy:
         content: '{{ response_pa_config.content }}'
-        dest: '/tmp/backup.txt'
+        dest: '/tmp/backupgui.txt'
         
