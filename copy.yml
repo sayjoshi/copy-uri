@@ -1,6 +1,6 @@
 ---
 - name: content copy
-  hosts: all 
+  hosts: localhost 
   tasks:
     - name: get rest api
       uri:
